@@ -42,8 +42,6 @@ if __name__ == '__main__':
     hb.log('Created ProjectFlow object at ' + p.project_dir + '\n    from script ' + p.calling_script + '\n    with base_data set at ' + p.base_data_dir)
     
     p.execute()
-
-    # START HERE: Working. Finish email about it to lab.
     
     result = 'Done!'
 
