@@ -15,23 +15,23 @@ if __name__ == '__main__':
     # files that already exist. 
     p.user_dir = os.path.expanduser('~')        
     p.extra_dirs = ['Files', 'gep', 'projects']
-    p.project_name = 'test_default'
+    p.project_name = 'test_gep_commercial_agriculture'  # This is the name of the project directory.
     # p.project_name = p.project_name + '_' + hb.pretty_time() # If don't you want to recreate everything each time, comment out this line.
     
     # Based on the paths above, set the project_dir. All files will be created in this directory.
     p.project_dir = os.path.join(p.user_dir, os.sep.join(p.extra_dirs), p.project_name)
     p.set_project_dir(p.project_dir) 
-    
 
-    gep_initialize_project.build_default_task_tree(p) 
-    
+    gep_initialize_project.build_gep_commercial_agriculture_task_tree(p)
+
     # Set the base data dir. The model will check here to see if it has everything it needs to run.
     # If anything is missing, it will download it. You can use the same base_data dir across multiple projects.
     # Additionally, if you're clever, you can move files generated in your tasks to the right base_data_dir
     # directory so that they are available for future projects and avoids redundant processing.
     # The final directory has to be named base_data to match the naming convention on the google cloud bucket.
-    p.base_data_dir = os.path.join(p.user_dir, 'files', 'base_data')
-    
+    # p.base_data_dir = os.path.join(p.user_dir, 'files', 'base_data')
+    p.base_data_dir = "G:/Shared drives/NatCapTEEMs/Files/base_data"
+
     p.countries_vector_path = p.get_path('cartographic', 'ee', 'ee_r264_correspondence.gpkg')
 
     # ProjectFlow downloads all files automatically via the p.get_path() function. If you want it to download from a different 
