@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # files that already exist. 
     p.user_dir = os.path.expanduser('~')        
     p.extra_dirs = ['Files', 'gep', 'projects']
-    p.project_name = 'test_gep_commercial_agriculture'  # This is the name of the project directory.
+    p.project_name = 'gep_commercial_agriculture'  # This is the name of the project directory.
     # p.project_name = p.project_name + '_' + hb.pretty_time() # If don't you want to recreate everything each time, comment out this line.
     
     # Based on the paths above, set the project_dir. All files will be created in this directory.
