@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 import hazelbean as hb
 
 import gep_initialize_project
@@ -32,12 +33,20 @@ if __name__ == '__main__':
     # p.base_data_dir = os.path.join(p.user_dir, 'files', 'base_data')
     p.base_data_dir = "G:/Shared drives/NatCapTEEMs/Files/base_data"
 
+    # For speed, we will load the countries vector just once, in the project initialization.
+    p.countries_csv_path = p.get_path('cartographic', 'ee', 'ee_r264_correspondence.csv')
     p.countries_vector_path = p.get_path('cartographic', 'ee', 'ee_r264_correspondence.gpkg')
+    gep_initialize_project.initialize_paths(p)
+    
+
 
     # ProjectFlow downloads all files automatically via the p.get_path() function. If you want it to download from a different 
     # bucket than default, provide the name and credentials here. Otherwise uses default public data 'gtap_invest_seals_2023_04_21'.
     p.data_credentials_path = None
     p.input_bucket_name = None
+    
+    # All results will be stored here by each child task.
+    p.results = {}
 
     hb.log('Created ProjectFlow object at ' + p.project_dir + '\n    from script ' + p.calling_script + '\n    with base_data set at ' + p.base_data_dir)
     
