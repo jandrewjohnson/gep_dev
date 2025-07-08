@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import hazelbean as hb
 
+from global_invest.commercial_agriculture import commercial_agriculture_tasks
 import gep_initialize_project
 
 
