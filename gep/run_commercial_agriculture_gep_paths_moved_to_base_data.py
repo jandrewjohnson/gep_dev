@@ -35,8 +35,8 @@ if __name__ == '__main__':
     p.base_data_dir = "G:/Shared drives/NatCapTEEMs/Files/base_data"
 
     # For speed, we will load the countries vector just once, in the project initialization.
-    p.countries_csv_path = p.get_path('cartographic', 'ee', 'ee_r264_correspondence.csv')
-    p.countries_vector_path = p.get_path('cartographic', 'ee', 'ee_r264_correspondence.gpkg')
+    p.df_countries_csv_path = p.get_path('cartographic', 'ee', 'ee_r264_correspondence.csv')
+    p.gdf_countries_vector_path = p.get_path('cartographic', 'ee', 'ee_r264_correspondence.gpkg')
     gep_initialize_project.initialize_paths(p)
     
 
