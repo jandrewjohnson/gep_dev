@@ -6,6 +6,7 @@ import gep_initialize_project
 
 if __name__ == '__main__':
     
+    # START HERE Make it copy the QMDs from global_invest to here and then render it as a full project with _quarto.yml
     """Simplified run file that assumes the user has already run the project and just wants to rerender the results."""
     
     # ProjectFlow object
